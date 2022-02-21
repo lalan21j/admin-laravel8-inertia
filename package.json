@@ -10,6 +10,9 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@babel/cli": "^7.17.3",
+        "@babel/core": "^7.17.5",
+        "@babel/preset-env": "^7.16.11",
         "@inertiajs/inertia": "^0.10.0",
         "@inertiajs/inertia-vue3": "^0.5.1",
         "@inertiajs/progress": "^0.2.6",
@@ -17,15 +20,19 @@
         "@tailwindcss/typography": "^0.5.0",
         "@vue/compiler-sfc": "^3.0.5",
         "axios": "^0.21",
+        "babel-loader": "^8.2.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.2",
         "tailwindcss": "^3.0.0",
+        "unplugin-auto-import": "^0.6.0",
+        "unplugin-vue-components": "^0.17.18",
         "vue": "^3.0.5",
         "vue-loader": "^16.1.2"
     },
     "dependencies": {
-        "browser-sync-webpack-plugin": "^2.3.0"
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "element-plus": "^2.0.2"
     }
 }
