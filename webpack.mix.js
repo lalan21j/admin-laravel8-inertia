@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -16,7 +16,16 @@ mix.js('resources/js/app.js', 'public/js').vue()
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .webpackConfig(require('./webpack.config'))
+    .browserSync({
+        // open: 'external',
+        port: 3000,
+        host: '127.0.0.1',
+        proxy: "127.0.0.1",
+        files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php', 'public/js/*.js', 'public/css/*.css']
+    })
+    .sourceMaps()
+    .version()
 
 if (mix.inProduction()) {
     mix.version();
