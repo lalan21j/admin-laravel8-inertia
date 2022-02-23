@@ -22,7 +22,7 @@ mix.js('resources/js/app.js', 'public/js').vue()
         port: 3000,
         host: '127.0.0.1',
         proxy: "127.0.0.1",
-        files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php', 'public/js/*.js', 'public/css/*.css']
+        files: ['resources/views/**/*.php', 'resources/views/**/*.vue', 'app/**/*.php', 'routes/**/*.php', 'public/js/*.js', 'public/css/*.css']
     })
     .sourceMaps()
     .version()

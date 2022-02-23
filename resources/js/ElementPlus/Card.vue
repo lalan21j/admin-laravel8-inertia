@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "layout.card",
+  name: "element.plus.card",
   props: {
     title: {
       type: String,
