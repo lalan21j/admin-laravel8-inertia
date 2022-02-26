@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "element.plus.table",
+  name: 'element.plus.table',
   props: {
     records: {
       type: Array,
