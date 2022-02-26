@@ -10,6 +10,7 @@ use App\Actions\Jetstream\InviteTeamMember;
 use App\Actions\Jetstream\RemoveTeamMember;
 use App\Actions\Jetstream\UpdateTeamName;
 use App\Models\Role;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
@@ -51,14 +52,18 @@ class JetstreamServiceProvider extends ServiceProvider
      */
     protected function configurePermissions()
     {
-        $roles = Role::all();
+        try {
+            $roles = Role::all();
 
-        // Log::info('Roles', ['data' => json_decode($roles[0]->permission)]);
+            // Log::info('Roles', ['data' => json_decode($roles[0]->permission)]);
 
-        Jetstream::defaultApiTokenPermissions(['read']);
+            Jetstream::defaultApiTokenPermissions(['read']);
 
-        foreach ($roles as $item) {
-            Jetstream::role($item->slug, $item->name, json_decode($item->permission))->description($item->description);
+            foreach ($roles as $item) {
+                Jetstream::role($item->slug, $item->name, $item->permission)->description($item->description);
+            }
+        } catch (QueryException $e) {
+            //
         }
     }
 }
