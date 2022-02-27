@@ -36,11 +36,12 @@
         "unplugin-icons": "^0.13.2",
         "unplugin-vue-components": "^0.17.18",
         "vue": "^3.0.5",
-        "vue-loader": "^16.1.2"
+        "vue-loader": "^16.8.3"
     },
     "dependencies": {
-        "@element-plus/icons-vue": "^0.2.7",
+        "@heroicons/vue": "^1.0.5",
         "browser-sync-webpack-plugin": "^2.3.0",
-        "element-plus": "^2.0.2"
+        "element-plus": "^2.0.2",
+        "query-string": "^7.1.1"
     }
 }
