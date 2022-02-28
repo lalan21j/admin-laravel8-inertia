@@ -1,16 +1,19 @@
 <template>
-  <el-table :data="records" stripe>
+  <el-table
+    :data="records"
+    stripe
+    class="pt-4"
+  >
     <slot />
   </el-table>
 </template>
 
 <script>
 export default {
-  name: 'element.plus.table',
+  name: 'ElementPlusTable',
   props: {
     records: {
-      type: Array,
-      default: []
+      type: Array
     }
   }
 }

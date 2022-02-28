@@ -1,5 +1,5 @@
 <template>
-  <el-card class="box-card" shadow="never">
+  <el-card shadow="never">
     <template #header>
       <div class="card-header">
         <span class="font-bold">{{ title }}</span>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "element.plus.card",
+  name: 'ElementPlusCard',
   props: {
     title: {
       type: String,
@@ -27,17 +27,5 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.text {
-  font-size: 14px;
-}
-
-.item {
-  margin-bottom: 18px;
-}
-
-.box-card {
-  /* width: 480px; */
 }
 </style>

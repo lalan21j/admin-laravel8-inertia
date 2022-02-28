@@ -1,10 +1,16 @@
 <template>
-  <el-link :type="type" :href="href" class="my-2 ml-2">{{ text }}</el-link>
+  <el-link
+    :type="type"
+    :href="href"
+    class="my-2 ml-2"
+  >
+    {{ text }}
+  </el-link>
 </template>
 
 <script>
 export default {
-  name: "element.plus.link",
+  name: 'ElementPlusLink',
   props: {
     type: {
       type: String,

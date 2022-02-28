@@ -1,10 +1,12 @@
 <template>
-  <el-button :type="type">{{ text }}</el-button>
+  <el-button :type="type">
+    <slot />
+  </el-button>
 </template>
 
 <script>
 export default {
-  name: "element.plus.button",
+  name: 'ElementPlusButton',
   props: {
     type: {
       type: String,
@@ -17,7 +19,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
