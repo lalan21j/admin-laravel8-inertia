@@ -27,3 +27,23 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::prefix('role')->group(function () {
+        Route::get('/view', function () {
+            return Inertia::render('Teams/Roles/Index');
+        })->name('teams.role.view');
+    });
+    Route::resource('/role', 'RoleController');
+
+    // MENÚ
+    Route::prefix('menu')->group(function () {
+        Route::get('/view', function () {
+            return Inertia::render('Teams/Menu/Index');
+        })->name('teams.menu.view');
+        Route::get('/tree', 'MenuController@menuTree');
+    });
+    Route::resource('/menu', 'MenuController');
+
+    Route::resource('/user', 'UserController');
+});
