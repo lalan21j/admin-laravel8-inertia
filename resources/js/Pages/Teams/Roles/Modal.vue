@@ -32,7 +32,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "teams.roles.modal",
+  name: 'teamsRolesModal',
   props: {
     dialogVisible: {
       type: Boolean,
